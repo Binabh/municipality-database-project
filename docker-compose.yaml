@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  db:
+    container_name: postgres_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: municipality_db
+    ports:
+      - "5432:5432"
+  python:
+    build: .
+    container_name: python_container
+    volumes:
+      - .:/code
+    command: python keepalive.py
+    depends_on:
+      - db
