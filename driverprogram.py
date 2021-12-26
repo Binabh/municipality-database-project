@@ -20,7 +20,7 @@ def create_table():
     print("Tables created successfully!")
     quit_or_continue()
 
-def delete_table():
+def delete_tables():
     cur.execute(open("DeleteTables.sql", "r").read())
     conn.commit()
     print("Tables deleted successfully!")
