@@ -1,1 +1,2 @@
-DROP OWNED BY postgres;
+DROP TABLE IF EXISTS Households;
+DROP TABLE IF EXISTS Wards;

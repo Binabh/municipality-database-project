@@ -44,7 +44,7 @@ def main():
     elif(choice == "2"):
         insert_data()
     elif(choice == "3"):
-        delete_tables()
+        delete_table()
     elif(choice == "4"):
         query_data()
     elif(choice == "5"):
